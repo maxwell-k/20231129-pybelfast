@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: MPL-2.0
 # SPDX-FileCopyrightText: 2023 Keith Maxwell
 from pathlib import Path
+from shutil import copy
 from shutil import rmtree
 
 import nox
@@ -45,6 +46,8 @@ def html(session) -> None:
         f"--output={SITE}/index.html",
         "index.md",
     )
+    for i in Path().glob("*.png"):
+        copy(i, SITE / i)
 
 
 @nox.session(python=False)

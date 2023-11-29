@@ -1,5 +1,6 @@
 /.en.utf-8.add.spl
 /.venv/
 /__pycache__/
+/_site/*.png
 /_site/index.html
 /_site/index.pdf
