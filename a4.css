@@ -1,0 +1,12 @@
+/*
+ * SPDX-License-Identifier: CC-BY-NC-SA-4.0
+ * SPDX-FileCopyrightText: 2023 Keith Maxwell
+ */
+
+/* https://github.com/marp-team/marp/discussions/151#discussioncomment-1216929 */
+@import "default";
+
+section {
+  width: 297mm;
+  height: 210mm;
+}

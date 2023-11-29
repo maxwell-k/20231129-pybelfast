@@ -1,0 +1,31 @@
+# .github/workflows/nox.yaml
+# Copyright 2023 Keith Maxwell
+# SPDX-License-Identifier: CC0-1.0
+
+name: Nox
+on: # yamllint disable-line rule:truthy
+  push: { branches: [main] }
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  main:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: wntrblm/nox@2023.04.22
+        with: { python-versions: "3.11" }
+      - run: nox
+      - uses: actions/upload-pages-artifact@v2
+      - uses: actions/deploy-pages@v2
