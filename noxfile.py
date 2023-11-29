@@ -93,8 +93,10 @@ def dev(session) -> None:
         "install",
         "--use-pep517",
         "black",
+        "cowsay",
         "flake8",
         "nox",
+        "pyyaml",
         "reorder-python-imports",
         "reuse",
     )

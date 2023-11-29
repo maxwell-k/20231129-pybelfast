@@ -7,5 +7,14 @@ Files:
   .en.utf-8.add
   .flake8
   .gitignore
+  2018-meetup.png
+  example_0.py
+  example_0.yaml
+  example_1.py
+  example_1.ts
+  example_1_fades.py
+  example_1_requirements.py
+  example_1_variable.py
+  languages.png
 Copyright: 2023 Keith Mawell
 License: CC0-1.0

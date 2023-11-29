@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 23.11.0
+    hooks: [{ id: black, language_version: python3.11 }]
+  - repo: https://github.com/pycqa/flake8
+    rev: 6.1.0
+    hooks: [{ id: flake8 }]
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.337
+    hooks:
+      - id: pyright
+        args: [--pythonpath=.venv/bin/python]
+        files: ^$
+        always_run: true
